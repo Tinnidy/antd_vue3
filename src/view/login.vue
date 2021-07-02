@@ -31,7 +31,7 @@
 import {UserOutlined, LockOutlined} from "@ant-design/icons-vue";
 import {defineComponent, reactive, toRefs} from 'vue';   //defineComponent
 import {message} from "ant-design-vue";
-import {login} from "@/api/login"
+import {login} from "@/api/login.js"
 export default defineComponent({
   components:{
     UserOutlined, LockOutlined

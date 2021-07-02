@@ -7,9 +7,10 @@ const login = (res) =>{
     data: res
   }).then(response=>{
     if(response.data.success){
-      console.log(response.data.data);
+      return response.data;
     }else{
-      console.log("出错了")
+      console.log("出错了");
+      return response.data;
     }
   })
 }
