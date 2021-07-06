@@ -57,6 +57,8 @@
           class="trigger"
           @click="() => (collapsed = !collapsed)"
         />
+
+        <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" class="avatar"/>
       </a-layout-header>
       <!--content-->
       <a-layout-content></a-layout-content>
@@ -115,6 +117,13 @@ export default {
   .app-header {
     background: #fff;
     padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .avatar{
+      width: 32px;
+      height: 32px;
+    }
   }
 }
 </style>
