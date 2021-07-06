@@ -9,26 +9,36 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
 //公共路由
-export const constantRoutes = [
-  {
-    path: '/login',
-    component: ()=> import('../view/login.vue'),
-  },
-  {
-    path: '/403',
-    component: ()=> import('../view/403.vue'),
-  },
-  {
-    path: '/404',
-    component: ()=> import('../view/404.vue'),
-  },
+export const constantRoutes = [{
+        path: '/',
+        redirect: '/login' //重定向
+    },
+    {
+        path: '/login',
+        component: () =>
+            import ('../view/login.vue'),
+    },
+    {
+        path: '/index',
+        component: () =>
+            import ('../layout/index.vue'),
+    },
+    {
+        path: '/403',
+        component: () =>
+            import ('../view/403.vue'),
+    },
+    {
+        path: '/404',
+        component: () =>
+            import ('../view/404.vue'),
+    },
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),   //配置路由模式
-  //路由地址
-  routes: constantRoutes
+    history: createWebHashHistory(), //配置路由模式
+    //路由地址
+    routes: constantRoutes
 });
 
 export default router;
-
